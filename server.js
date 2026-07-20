@@ -3,7 +3,6 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const PORT = process.env.PORT || 3000;
-const HOST = '0.0.0.0';
 
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -120,6 +119,6 @@ app.get(['/', '/index'], (req, res) => {
   console.log("Working")
 });
 
-app.listen(PORT, HOST, () => {
+app.listen(PORT, () => {
   console.log(`Server is running on http://${HOST}:${PORT}`);
 });
