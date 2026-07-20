@@ -1,0 +1,129 @@
+html{
+    cursor: url('images/cursor.png'), auto;
+}
+
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.17em;
+    text-align: center;
+    margin: 0px auto;
+    background-color: rgb(53, 53, 53);
+    padding-top: 150px;
+}
+
+
+
+#credits {
+    display: inline-block;
+    z-index: 420;
+    position: fixed;
+    text-align: right;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    top: 0;
+    right: 0;
+}
+
+
+
+#title {
+    letter-spacing: 20px;
+    font-weight: 300;
+    font-size: 2.17em;
+    margin-right: -20px;
+    color: mediumspringgreen;
+}
+
+#statusResult {
+    display: block;
+    font-size: 1.17em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+    padding: 0px 5px 0px 5px;
+    color: aliceblue;
+
+}
+
+#timer {
+    display: block;
+    font-size: 1.17em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+    padding: 0px 5px 0px 5px;
+    color: aliceblue;
+
+}
+
+
+img.l{
+    height: auto;
+    max-width: 20vh;
+    min-width: 10vh;
+}
+
+#socialLinks{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white; 
+}
+
+
+.fa-twitch{
+    font-size: 36px;
+    color: #6441a5;
+    
+}
+
+.fa-youtube-play{
+    font-size: 36px;
+    color: red;
+    padding: 5px;
+    font-style: normal;
+    
+}
+
+.fa-twitter{
+    font-size: 36px;
+    color: rgb(0, 149, 255);
+}
+
+
+a, a:link, a:visited, a:hover, a:active {
+    color: white;
+    text-decoration: none;
+    cursor: url('images/cursor.png'), auto;
+    transition: color 0.3s ease;
+}
+
+.tLink:hover{
+    color: #6441a5;
+}
+
+.fLink:hover{
+    color: #6481ff;
+}
+
+.hLink:hover{
+    color: #00ff4c;
+}
+
+.cLink:hover{
+    color: #d61eff;
+}
+
+.mLink:hover{
+    color: #fff700;
+}
+
+.xLink:hover{
+    color: #00ccff;
+}
+
