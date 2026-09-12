@@ -48,7 +48,7 @@ body {
 
 }
 
-#timer {
+#timer, #next-container {
     display: block;
     font-size: 1.17em;
     margin-top: 1em;

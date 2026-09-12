@@ -72,13 +72,13 @@ app.get('/api/status', async (req, res) => {
 });
 
 app.get('/api/schedule', async (req, res) => {
-  const username = process.env.STREAMER_NAME;
 
   try {
     if (!twitchAccessToken){
       await getTwitchAccessToken();
     }
     let response = await fetch(`https://api.twitch.tv/helix/schedule?broadcaster_id=28219022`,{
+    //let response = await fetch(`https://api.twitch.tv/helix/schedule?broadcaster_id=30446208`,{
       headers: {
         'Client-ID' : process.env.TWITCH_CLIENT_ID,
         'Authorization': `Bearer ${twitchAccessToken}`
@@ -87,6 +87,7 @@ app.get('/api/schedule', async (req, res) => {
     if (response.status === 401){
       await getTwitchAccessToken();
       response = await fetch(`https://api.twitch.tv/helix/schedule?broadcaster_id=28219022`,{
+      //response = await fetch(`https://api.twitch.tv/helix/schedule?broadcaster_id=30446208`,{
         headers: {
           'client-ID': process.env.TWITCH_CLIENT_ID,
           'Authorization' : `Bearer ${twitchAccessToken}`
@@ -96,6 +97,7 @@ app.get('/api/schedule', async (req, res) => {
 
 
     const result = await response.json();
+    console.log(result)
     if (result.data.segments){
       const nextStream = result.data.segments[0]
       res.json({
